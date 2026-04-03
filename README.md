@@ -74,6 +74,38 @@ The Python script:
 
 ---
 
+## Circuit Setup
+
+Here are a few photos of the setup while it was running. This includes the Arduino, the breadboard wiring, the hall sensor, the DS18B20 temperature probe, and the OLED display.
+
+### Wiring Overview
+![Wiring Overview](images/wiring1.jpg)
+
+### OLED Display Output
+![OLED Output](images/oled1.jpg)
+
+### Test Setup With Drill
+For testing RPM, I used a brushless drill. Brushless motors don’t generate much heat (they’re around 85–90% more efficient than brushed motors), so the temperature barely moves during the test. That’s expected for this setup.
+![Drill Test](images/drilltest1.jpg)
+
+---
+
+## Test Runs
+
+I ran a few test sessions to see how the system behaved at different RPM levels. The Arduino sends temperature and RPM once per second, and the Python script logs everything and graphs it.
+
+### Example Graph
+Here’s one of the graphs from a test run. RPM jumps around as the drill speed changes, while temperature stays almost flat because of the brushless motor.
+![Graph Example](images/graph1.png)
+
+---
+
+## Notes on Temperature Behavior
+
+The temperature doesn’t rise much in these tests because the drill is brushless. Brushless motors produce very little friction and heat, so the DS18B20 doesn’t see much of a temperature increase. If I switch to a brushed motor or add a heat source, I’d expect a more noticeable temperature curve.
+
+---
+
 ## Author
 
 **Benjamin Lust**  
