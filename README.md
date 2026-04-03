@@ -66,7 +66,7 @@ The Python script:
 
 ## Future Things I Might Add
 
-- More sensors (TPS, coolant temp, etc.)  
+- More sensors (TPS, O2 sensor, etc.)  
 - CAN bus simulation  
 - SD card logging  
 - A small PCB version  
