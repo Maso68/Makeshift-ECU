@@ -34,7 +34,7 @@ This is a small project I built to simulate a basic ECU‑style system. It reads
 
 | File | Purpose |
 |------|---------|
-| **RMPTEMPPROJECT.ino** | Arduino code for reading sensors and updating the OLED |
+| **RPMTEMPPROJECT.ino** | Arduino code for reading sensors and updating the OLED |
 | **RPMTEMPPROJECT.py** | Python script for logging and graphing the data |
 | **README.md** | This documentation |
 
