@@ -1,19 +1,19 @@
 # Makeshift ECU — RPM & Temperature Monitor
 
-This is a small project I built to simulate a basic ECU-style system. It reads RPM using a hall‑effect sensor, measures temperature with a DS18B20 sensor, shows everything on an OLED display, and sends the data over serial so a Python script can log and graph it. It’s a simple setup, but it ties together embedded code, sensors, and data visualization in a way that feels like a real engine‑monitoring system.
+This is a small project I built to simulate a basic ECU‑style system. It reads RPM using a hall‑effect sensor, measures temperature with a DS18B20 sensor, shows everything on an OLED display, and sends the data over serial so a Python script can log and graph it. It’s a simple setup, but it ties together embedded code, sensors, and data visualization in a way that feels like a real engine‑monitoring system.
 
 ---
 
 ## What the Project Does
 
-**On the Arduino side:**
+### On the Arduino side:
 - Counts pulses from a hall sensor to calculate RPM  
 - Reads temperature in Fahrenheit from a DS18B20  
 - Displays both values on a 128×64 OLED  
 - Sends `temperature,rpm` over serial once per second  
 - Shows a “TOO HOT” warning if the temp goes above 80°F  
 
-**On the Python side:**
+### On the Python side:
 - Logs incoming serial data to a CSV file  
 - Plots temperature and RPM over time on a dual‑axis graph  
 - Gives a quick visual of how the system behaves during a run  
@@ -22,7 +22,7 @@ This is a small project I built to simulate a basic ECU-style system. It reads R
 
 ## Hardware Used
 
-- Arduino (Uno/Nano/etc.)  
+- Arduino Uno  
 - Hall‑effect sensor  
 - DS18B20 temperature sensor  
 - SSD1306 OLED display (I2C)  
@@ -66,7 +66,7 @@ The Python script:
 
 ## Future Things I Might Add
 
-- More sensors (TPS, O2 sensor, etc.)  
+- More sensors (TPS, O₂ sensor, etc.)  
 - CAN bus simulation  
 - SD card logging  
 - A small PCB version  
@@ -79,14 +79,14 @@ The Python script:
 Here are a few photos of the setup while it was running. This includes the Arduino, the breadboard wiring, the hall sensor, the DS18B20 temperature probe, and the OLED display.
 
 ### Wiring Overview
-![Wiring Overview](images/wiring1.jpg)
+![Wiring Overview](wiringpic.jpeg)
 
 ### OLED Display Output
-![OLED Output](images/oled1.jpg)
+![OLED Output](oledpic.jpeg)
 
 ### Test Setup With Drill
 For testing RPM, I used a brushless drill. Brushless motors don’t generate much heat (they’re around 85–90% more efficient than brushed motors), so the temperature barely moves during the test. That’s expected for this setup.
-![Drill Test](images/drilltest1.jpg)
+![Drill Test](testingpic.jpeg)
 
 ---
 
@@ -96,7 +96,7 @@ I ran a few test sessions to see how the system behaved at different RPM levels.
 
 ### Example Graph
 Here’s one of the graphs from a test run. RPM jumps around as the drill speed changes, while temperature stays almost flat because of the brushless motor.
-![Graph Example](images/graph1.png)
+![Graph Example](testrunbrushlessdrill.png)
 
 ---
 
